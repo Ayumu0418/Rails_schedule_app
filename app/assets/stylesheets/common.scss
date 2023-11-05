@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 40px;
+  padding: 15px;
+  margin-bottom: 30px;
+  background: orange;
+  color: white;
+  text-align: center;
+}
+
+header h1 {
+  margin-top: -6px;
+}
+
+footer {
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  border-top: 7px solid orange;
+}
+
+table {
+  padding: 0 8px;
+  width: 100%;
+  height: auto;
+}
+
+table th {
+  background-color: #fbc25b;
+  padding: 10px 20px;
+}
+
+table td {
+  background-color: #f9ecd5;
+  padding: 10px 20px;
+}
+
+table td a {
+  color: black;
+  text-decoration: none;
+}
+
+tbody .table_lists td {
+  text-align: center;
+}
+
+
+.notice {
+  background-color: #ccf;
+  padding: 5px;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.button .new_button {
+  border-radius: 4px;
+  grid-gap: 8px;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  height: 20px;
+  width: 72px;
+  line-height: 18px;
+  padding: 16px 20px;
+  margin: 12px 8px 0;
+  background: orange;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button .new_button:hover {
+  opacity: 0.8;
+}
+
+.edit_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button h2 {
+  margin-left: 8px;
+}
+
+.footer_container {
+  background-color: #fbc25b;
+  padding: 10px 20px;
+  margin: 24px 8px;
+  display: flex; 
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.calender {
+  width: 300px;
+  height: 40px;
+}
+
+.error {
+  margin: 0;
+  padding-top: 0;
+  height: 20px;
+}
+
+.error p {
+  margin: 0;
+}
+
+// 新規登録画面
+.news {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.new h4 {
+  padding-left: 8px;
+  color: red;
+}
+
+.new_h3  {
+  width: 100%;
+}
+
+.new_h3 h3 {
+  width: 100%;
+  padding-left: 8px;
+}
+
+.new_list {
+  display: flex;
+  flex-direction: column;
+}
+
+.new_list th {
+  text-align: left;
+}
+
+.save_button {
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+}
+
+.save {
+  width: 132px;
+  height: 52px;
+  font-size: 18px;
+}
+
+.cancel_button {
+  border-radius: 4px;
+  grid-gap: 8px;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  height: 20px;
+  width: 92px;
+  line-height: 18px;
+  padding: 16px 20px;
+  background: orange;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+textarea {
+  resize: vertical;
+  width: 780px;
+}
+
+input[type="text"], input[type="date"]  { 
+  width: 300px;
+  height: 40px;
+}
+
+// 詳細ページ
+
+.show_list {
+  display: flex;
+  flex-direction: column;
+}
+
+.back_button {
+  padding-left: 8px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
+.edit_container .title_name {
+  padding-left: 8px;
+  font-size: 24px;
+}
+
+.edit_container .edit_link {
+  margin-top: 32px;
+}
+
+.edit_container .edit_button {
+  border-radius: 4px;
+  grid-gap: 8px;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  height: 20px;
+  width: 92px;
+  line-height: 18px;
+  padding: 16px 20px;
+  background: orange;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}

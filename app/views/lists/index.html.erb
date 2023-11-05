@@ -1,0 +1,47 @@
+<thead>
+<div class = "button">
+  <h2>予定一覧</h2>
+  <%= link_to "新規登録", :new_list, class:"new_button"%>  
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>タイトル</th>
+      <th>開始日</th>
+      <th>終了日</th>
+      <th>終日</th>
+      <th>更新日時</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <% if flash[:notice] %>
+      <p class="notice"><%= flash[:notice] %></p>
+    <% end %>
+  </thead>
+  <tbody>
+    <% @lists.each do |list| %>
+      <tr class = "table_lists">
+        <td><%= list.id %></td>
+        <td><%= list.title %></td>
+        <td><%= list.start.to_s(:date_jp)%></td>
+        <td><%= list.end.to_s(:date_jp)%></td>
+        <td><% if list.allday == true %>
+            ○
+            <% else %>
+        <% end %></td>
+        <td><%= list.updated_at.strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= link_to "詳細", list %></td>
+        <td><%= link_to "編集", [:edit, list] %></td>
+        <td><%= button_to "削除", list, method: :delete, onclick: "return confirm('本当に削除しますか?');" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<tfooter>
+  <div class = "footer_container">
+    <p><%= "合計予定#{List.count}件" %></p>
+    <p><%= "本日の日付 #{Time.now.strftime("%Y/%m/%d")}" %></p>
+  </div>
+</tfooter>

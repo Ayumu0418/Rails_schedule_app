@@ -1,0 +1,63 @@
+<div class = "news">
+  <div class = "new_h3">
+    <h3>予定の新規追加</h3>
+      
+    <%= form_with model: @list do |f| %>
+      
+      <table class = "new_form">
+          <div class = "new">
+            <% if @list.errors.any? %>
+              <h4>※入力した内容にエラーがあります</h4>
+            <% end %>
+            <tr class = "new_list">
+              <th><%= f.label :title ,"タイトル" %></th>
+              <td><%= f.text_field :title, placeholder: " タイトルを入力" %></td>
+              <td class = "error"><% if @list.errors.include?(:title) %>
+              <p style="color: red;"><%= @list.errors.full_messages_for(:title).first %>
+              <% end %></td>
+            </tr>
+            <tr class="new_list">
+              <th><%= f.label :start, "開始日" %></th>
+              <td><%= f.date_field :start %></td>
+              <td class="error">
+                <% if @list.errors.include?(:start) %>
+                  <p style="color: red;"><%= @list.errors.full_messages_for(:start).first %></p>
+                <% end %>
+              </td>
+            </tr>
+            <tr class="new_list">
+              <th><%= f.label :end, "終了日" %></th>
+              <td><%= f.date_field :end %></td>
+              <td class="error">
+                <% if @list.errors.include?(:end) %>
+                  <p style="color: red;"><%= @list.errors.full_messages_for(:end).first %></p>
+                <% end %>
+              </td>
+            </tr>
+              <tr class = "new_list">
+                <td><%= f.check_box :allday, {}, checked_value='true', unchecked_value='false' %>
+                <%= f.label :allday ,"終日の場合はチェックを入れます" %>
+                </td>
+              </tr>
+              <tr class = "new_list">
+                <th><%= f.label :memo ,"スケジュールメモ" %></th>
+                <td><%= f.text_area :memo , size: "780x8", placeholder: " メモを入力" %></td>
+                <td class = "error"><% if @list.errors.include?(:memo) %>
+              <p style="color: red;"><%= @list.errors.full_messages_for(:memo).first %>
+              <% end %></td>
+              </tr>
+              <tr class = "new_list">
+                <td class = "save_button">
+                  <div class = "cancel_button">
+                    <%= link_to "キャンセル", :lists, class: "button" %>
+                  </div>
+                  <div>
+                    <%= f.submit "保存",  class: "save" %>
+                  </div>
+                </td>
+              </tr>
+          </div>
+        </table>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+
+<div class = "news">
+    <div class = "new_h3">
+      <div>
+        <p><%= link_to "← 一覧に戻る", :lists, class:"back_button" %></p>
+      </div>
+      <div class = "edit_container">
+        <p class = "title_name"><%= @list.title %></p>
+        <p class = "edit_link"><%= link_to "編集", [:edit, @list], class:"edit_button" %></p>
+      </div>
+    </div>
+
+  <table class = "new_form">
+    <tr class = "new_list">
+      <tr class="new_list">
+        <th>開始日</th>
+        <td><%= @list.start %></td>
+      </tr>
+      <tr class="new_list">
+        <th>終了日</th>
+        <td><%= @list.end %></td>
+      </tr>
+      <tr class = "new_list">
+        <th>終日</th>
+        <td><% if @list.allday == true %>
+        ○
+        <% else %>
+        &nbsp;
+        <% end %></td>
+      </tr>
+      <tr class = "new_list">
+        <th>スケジュールメモ</th>
+        <td><%= @list.memo %>&nbsp;</td>
+      </tr>
+    </tr>
+  </table>
+</div>
+
